@@ -20,7 +20,7 @@ public class PlayerHit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("3");
+        
         if (other.CompareTag("breakable"))
         {
             other.GetComponent<Pot>().Smash();

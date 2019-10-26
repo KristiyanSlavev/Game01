@@ -8,7 +8,9 @@ public enum PlayerState
 {
     walk,
     attack,
-    interact
+    interact,
+    stagger,
+    idle
 }
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public float bulletSpeed = 6f;
     public float rotateAngle;
 
-    public Rigidbody2D rb;
+    public Rigidbody2D myRigidbody;
     public Animator animator;
 
     [SerializeField]
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
         rotateAngle = 0f;
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
         animator.SetFloat("Horizontal", 0);
         animator.SetFloat("Vertical", -1);
         //animator.speed = 0;
@@ -51,11 +53,12 @@ public class PlayerMovement : MonoBehaviour
 
         //transform.position = new Vector2(movement.x * moveSpeed * Time.deltaTime + transform.position.x, movement.y * moveSpeed * Time.deltaTime + transform.position.y);
 
-        if (CrossPlatformInputManager.GetButtonDown("Sword1") || CrossPlatformInputManager.GetButtonDown("Arrow1") && currentState != PlayerState.attack)
+        if (CrossPlatformInputManager.GetButtonDown("Sword1") || CrossPlatformInputManager.GetButtonDown("Arrow1") 
+            && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             Fire();
         }
-        else if (currentState == PlayerState.walk)
+        else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
             UpdateAnimationAndMove();
         }
@@ -194,6 +197,21 @@ public class PlayerMovement : MonoBehaviour
     void MoveCharacter()
     {
         //Movement
-        rb.MovePosition(transform.position + movement * moveSpeed * Time.fixedDeltaTime);
+        myRigidbody.MovePosition(transform.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void Knock(float knockTime)
+    {
+        StartCoroutine(KnockCo(knockTime));
+    }
+    private IEnumerator KnockCo(float knockTime)
+    {
+        if (myRigidbody != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidbody.velocity = Vector2.zero;
+            currentState = PlayerState.idle;
+            myRigidbody.velocity = Vector2.zero;
+        }
     }
 }

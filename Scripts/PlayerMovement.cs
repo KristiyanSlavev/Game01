@@ -92,6 +92,8 @@ public class PlayerMovement : MonoBehaviour
         {
             //Debug.Log("1");
             MoveCharacter();
+            movement.x = Mathf.Round(movement.x);
+            movement.y = Mathf.Round(movement.y);
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);

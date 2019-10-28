@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
+    public VectorValue startingPosition;
 
     [SerializeField]
     Transform gun;
@@ -42,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         animator.SetFloat("Horizontal", 0);
         animator.SetFloat("Vertical", -1);
+        transform.position = startingPosition.initialValue;
         //animator.speed = 0;
     }
 

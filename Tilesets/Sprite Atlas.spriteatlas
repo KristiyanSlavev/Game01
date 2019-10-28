@@ -42,13 +42,15 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: b61b55ea57240f042bb329b07521b0d7, type: 3}
-    totalSpriteSurfaceArea: 1225569
+    - {fileID: 102900000, guid: e09ebbc2cba20d8419b6c868ee4d6d43, type: 3}
+    totalSpriteSurfaceArea: 1826502
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: b01517b4fa26c2c76d8495028daef612
+      Hash: 2cb7e79220285ba8b39c9e7eefd95af0
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 52cdc3a06792495469f1e5e7b2835ba5, type: 3}
   - {fileID: 21300018, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300016, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300010, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
@@ -141,6 +143,7 @@ SpriteAtlas:
   - {fileID: 21300164, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300162, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300160, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
+  - {fileID: 21300000, guid: 98616c52901725e48ab5949d24d05676, type: 3}
   - {fileID: 21301666, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21301646, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21300378, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
@@ -1011,6 +1014,9 @@ SpriteAtlas:
   - {fileID: 21300392, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21300216, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21301296, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
+  - {fileID: 21300004, guid: c8cd284359fec5d4d8d85c9fd53a5436, type: 3}
+  - {fileID: 21300002, guid: c8cd284359fec5d4d8d85c9fd53a5436, type: 3}
+  - {fileID: 21300000, guid: c8cd284359fec5d4d8d85c9fd53a5436, type: 3}
   - {fileID: 21300102, guid: 8354516420ec7d643b50608cddb0a168, type: 3}
   - {fileID: 21300164, guid: 8354516420ec7d643b50608cddb0a168, type: 3}
   - {fileID: 21300100, guid: 8354516420ec7d643b50608cddb0a168, type: 3}
@@ -2556,6 +2562,7 @@ SpriteAtlas:
   - {fileID: 21300058, guid: 14fde85ccb61c9849a58910288732910, type: 3}
   - {fileID: 21300150, guid: 14fde85ccb61c9849a58910288732910, type: 3}
   m_PackedSpriteNamesToIndex:
+  - sccpre.cat-health-bar-png-1293748
   - objects 1_9
   - objects 1_8
   - objects 1_5
@@ -2648,6 +2655,7 @@ SpriteAtlas:
   - objects 1_82
   - objects 1_81
   - objects 1_80
+  - PikPng.com_health-bar-png_769017
   - ground_tiles_833
   - ground_tiles_823
   - ground_tiles_189
@@ -3518,6 +3526,9 @@ SpriteAtlas:
   - ground_tiles_196
   - ground_tiles_108
   - ground_tiles_648
+  - pngkey.com-minecraft-heart-png-1905793_2
+  - pngkey.com-minecraft-heart-png-1905793_1
+  - pngkey.com-minecraft-heart-png-1905793_0
   - CnS4_8QUMAE5pjO_51
   - CnS4_8QUMAE5pjO_82
   - CnS4_8QUMAE5pjO_50

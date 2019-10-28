@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D myRigidbody;
     public Animator animator;
+    public FloatValue currentHealth;
+    public Signal playerHealthSignal;
 
     [SerializeField]
     Transform gun;
@@ -202,9 +204,15 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(transform.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    public void Knock(float knockTime)
+    public void Knock(float knockTime, float damage)
     {
-        StartCoroutine(KnockCo(knockTime));
+        currentHealth.initialValue -= damage;
+        if (currentHealth.initialValue> 0)
+        {
+            playerHealthSignal.Raise();
+            StartCoroutine(KnockCo(knockTime));
+        }
+        
     }
     private IEnumerator KnockCo(float knockTime)
     {

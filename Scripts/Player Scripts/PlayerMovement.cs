@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
     public VectorValue startingPosition;
+    public Inventory playerInventory;
+    public SpriteRenderer receivedItemSprite;
 
     [SerializeField]
     Transform gun;
@@ -50,6 +52,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (currentState == PlayerState.interact)
+        {
+            return;
+        }
         movement = Vector3.zero;
         //Input
         movement.x = Mathf.RoundToInt(CrossPlatformInputManager.GetAxisRaw("Horizontal"));
@@ -117,7 +124,31 @@ public class PlayerMovement : MonoBehaviour
         yield return null;
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.3f);
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
         currentState = PlayerState.walk;
+    }
+
+    public void RaiseItem()
+    {
+        if (playerInventory.currentItem != null){
+            if (currentState != PlayerState.interact)
+            {
+                animator.SetBool("receive item", true); 
+                currentState = PlayerState.interact;
+                receivedItemSprite.sprite = playerInventory.currentItem.itemSprite;
+            }
+            else
+            {
+                animator.SetBool("receive item", false);
+                currentState = PlayerState.idle;
+                receivedItemSprite.sprite = null;
+                playerInventory.currentItem = null;
+            }
+        }
+        
     }
 
     private IEnumerator BowCo()

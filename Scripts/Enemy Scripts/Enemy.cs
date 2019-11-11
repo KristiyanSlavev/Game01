@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
     public GameObject deathEffect;
+    private float deathEffectDelay = 1f;
 
     private void Awake()
     {
@@ -40,7 +41,7 @@ public class Enemy : MonoBehaviour
         if (deathEffect !=null)
         {
             GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(effect, 1f);
+            Destroy(effect, deathEffectDelay);
         }
     }
 

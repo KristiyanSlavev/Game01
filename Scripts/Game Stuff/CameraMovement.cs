@@ -13,9 +13,14 @@ public class CameraMovement : MonoBehaviour
 
     public Animator anim;
 
+    public VectorValue camMax;
+    public VectorValue camMin;
+
     // Start is called before the first frame update
     void Start()
     {
+        maxPosition = camMax.initialValue;
+        minPosition = camMin.initialValue;
         anim = GetComponent<Animator>();
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7c7dbc66b1657b428654ce525d73d4f, type: 3}
-  m_Name: TwoHitEnemyHealth
+  m_Script: {fileID: 11500000, guid: b310215d184cda7409b11f46765f92e9, type: 3}
+  m_Name: ReceivedCoin
   m_EditorClassIdentifier: 
-  initialValue: 2
-  RuntimeValue: 2
+  listeners: []

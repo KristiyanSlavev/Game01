@@ -43,11 +43,11 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: b61b55ea57240f042bb329b07521b0d7, type: 3}
     - {fileID: 102900000, guid: e09ebbc2cba20d8419b6c868ee4d6d43, type: 3}
-    totalSpriteSurfaceArea: 14995812
+    totalSpriteSurfaceArea: 14476410
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 6da19e045ffc4ee56d4a3a5ce6663285
+      Hash: 1f7066d80171c4ef81329a20f28e0091
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 2d2a5f9036fcba8408ce45df37607b8a, type: 3}
@@ -146,7 +146,6 @@ SpriteAtlas:
   - {fileID: 21300160, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300000, guid: 0927e012dc230aa4092a3b7a000fb11f, type: 3}
   - {fileID: 21300000, guid: 98616c52901725e48ab5949d24d05676, type: 3}
-  - {fileID: 21300000, guid: a3f60e72e6953c349a9e9a6c9e8b93bb, type: 3}
   - {fileID: 21301666, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21301646, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21300378, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
@@ -2942,7 +2941,10 @@ SpriteAtlas:
   - {fileID: 21300004, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300006, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300276, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
+  - {fileID: 21300282, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300278, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
+  - {fileID: 21300280, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
+  - {fileID: 21300284, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300268, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300270, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300258, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
@@ -3378,7 +3380,6 @@ SpriteAtlas:
   - objects 1_80
   - download-portal-free-png-photo-images-and-clipart-freepngimg-portal-png-200_200
   - PikPng.com_health-bar-png_769017
-  - Player01_Complete_Uncolored_100x
   - ground_tiles_833
   - ground_tiles_823
   - ground_tiles_189
@@ -6174,7 +6175,10 @@ SpriteAtlas:
   - objects_2
   - objects_3
   - objects_138
+  - objects_141
   - objects_139
+  - objects_140
+  - objects_142
   - objects_134
   - objects_135
   - objects_129

@@ -58,7 +58,7 @@ SpriteAtlas:
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 6549400a2d13a9d63b79135d56bc9ab8
+      Hash: 7db81cb3c96ac9b6523005fa69883925
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 2d2a5f9036fcba8408ce45df37607b8a, type: 3}
@@ -3007,11 +3007,11 @@ SpriteAtlas:
   - {fileID: 21300094, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300054, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300074, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
-  - {fileID: 21300048, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300072, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300050, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300062, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300060, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
+  - {fileID: 21300048, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300066, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300064, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
   - {fileID: 21300224, guid: c231114c3c784ab41b67ba98a596977a, type: 3}
@@ -6241,11 +6241,11 @@ SpriteAtlas:
   - objects_47
   - objects_27
   - objects_37
-  - objects_24
   - objects_36
   - objects_25
   - objects_31
   - objects_30
+  - Rock1
   - objects_33
   - objects_32
   - objects_112

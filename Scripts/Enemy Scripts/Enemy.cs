@@ -18,12 +18,19 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public Vector2 homePosition;
     public GameObject deathEffect;
     private float deathEffectDelay = 1f;
 
     private void Awake()
     {
         health = maxHealth.initialValue;
+        
+    }
+
+    private void OnEnable()
+    {
+        transform.position = homePosition;
     }
 
     private void TakeDamage(float damage)

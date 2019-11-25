@@ -10,5 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e3398edbd1c78b40804ad026683bd77, type: 3}
-  m_Name: New Loot Table
+  m_Name: MostlyHearts
   m_EditorClassIdentifier: 
+  loots:
+  - thisLoot: {fileID: 256941918871072483, guid: e776cddaac4089c4db370508305a77c0,
+      type: 3}
+    lootChance: 50
+  - thisLoot: {fileID: 83700727460468239, guid: 3fdee9d039bd1da4fbf6d90f7dc29826,
+      type: 3}
+    lootChance: 25

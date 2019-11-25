@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", 0);
         animator.SetFloat("Vertical", -1);
         transform.position = startingPosition.initialValue;
-        //animator.speed = 0;
     }
 
     // Update is called once per frame
@@ -199,33 +198,21 @@ public class PlayerMovement : MonoBehaviour
         if (movement.x == 0 && movement.y == -1)
         {
             rotateAngle = -180f;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            //animator.SetInteger("Direction", 5);
         }
 
         if (movement.x == -1 && movement.y == -1)
         {
             rotateAngle = -225f;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            //animator.SetInteger("Direction", 6);
         }
 
         if (movement.x == -1 && movement.y == 0)
         {
             rotateAngle = -270f;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            //animator.SetInteger("Direction", 7);
         }
 
         if (movement.x == -1 && movement.y == 1)
         {
             rotateAngle = -315;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            // animator.SetInteger("Direction", 8);
         }
 
         gun.rotation = Quaternion.Euler(0f, 0f, rotateAngle);

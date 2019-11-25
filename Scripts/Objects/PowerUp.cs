@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//ol(OL
 public class PowerUp : MonoBehaviour
 {
 

@@ -42,16 +42,18 @@ public class Door : Interactable
         }
     }
 
-    void Open()
+    public void Open()
     {
         doorSprite.enabled = false;
         open = true;
         physicsCollider.enabled = false;
     }
 
-    void Close()
+    public void Close()
     {
-
+        doorSprite.enabled = true;
+        open = false;
+        physicsCollider.enabled = enabled;
     }
 
 

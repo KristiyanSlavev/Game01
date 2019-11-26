@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public PlayerState currentState;
     [SerializeField]
     public float moveSpeed = 5f;
-    public float bulletSpeed = 6f;
+    
     public float rotateAngle;
 
     public Rigidbody2D myRigidbody;
@@ -28,11 +28,8 @@ public class PlayerMovement : MonoBehaviour
     public Inventory playerInventory;
     public SpriteRenderer receivedItemSprite;
     public Signal playerHit;
+    public GameObject projectile;
 
-    [SerializeField]
-    Transform gun;
-    [SerializeField]
-    Rigidbody2D arrow;
 
     //Vector2 stores both x and y axis
     private Vector3 movement;
@@ -41,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
         currentState = PlayerState.walk;
-        rotateAngle = 0f;
+
         animator = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
         animator.SetFloat("Horizontal", 0);
@@ -64,10 +61,15 @@ public class PlayerMovement : MonoBehaviour
 
         //transform.position = new Vector2(movement.x * moveSpeed * Time.deltaTime + transform.position.x, movement.y * moveSpeed * Time.deltaTime + transform.position.y);
 
-        if (CrossPlatformInputManager.GetButtonDown("Sword1") || CrossPlatformInputManager.GetButtonDown("Arrow1") 
+        if (CrossPlatformInputManager.GetButtonDown("Sword1") /*|| CrossPlatformInputManager.GetButtonDown("Arrow1")*/ 
             && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            Fire();
+            StartCoroutine(AttackCo());
+        }
+        else if(CrossPlatformInputManager.GetButtonDown("Arrow1")
+            && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {
+            StartCoroutine(SecondAttackCo());
         }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
@@ -76,25 +78,21 @@ public class PlayerMovement : MonoBehaviour
         
         //UpdateAnimationAndMove();
         
-        Rotate();
+        //Rotate();
     }
 
-    void Fire()
-    {
-        if (CrossPlatformInputManager.GetButtonDown ("Arrow1"))
+    //void Fire()
+    //{
+        /*if (CrossPlatformInputManager.GetButtonDown ("Arrow1"))
         {
             //Debug.Log("1");
             StartCoroutine(BowCo()); 
             var firedBullet = Instantiate(arrow, gun.position, gun.rotation);
             firedBullet.AddForce(gun.up * bulletSpeed);
-        }
+        }*/
 
-        if (CrossPlatformInputManager.GetButtonDown("Sword1") && currentState != PlayerState.attack)
-        {
-            
-            StartCoroutine(AttackCo());
-        }
-    }
+       
+   // }
 
     void UpdateAnimationAndMove()
     {
@@ -151,72 +149,28 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private IEnumerator BowCo()
+    private IEnumerator SecondAttackCo()
     {
-        animator.SetBool("Bow", true);
+        //animator.SetBool("Bow", true);
         currentState = PlayerState.attack;
         yield return null;
-        animator.SetBool("Bow", false);
+        MakeArrow();
+        //animator.SetBool("Bow", false);
         yield return new WaitForSeconds(.3f);
         currentState = PlayerState.walk;
     }
 
-    void Rotate()
+    private void MakeArrow()
     {
-        if (movement.x == 0 && movement.y == 1)
-        {
-            rotateAngle = 0;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            //animator.SetInteger("Direction", 1);
-        }
+        Vector2 temp = new Vector2(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
+        Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
+        arrow.Setup(temp, ChooseArrowDirection());
+    }
 
-        if (movement.x == 1 && movement.y == 1)
-        {
-            rotateAngle = -45f;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            //animator.SetInteger("Direction", 2);
-        }
-
-        if (movement.x == 1 && movement.y == 0)
-        {
-            rotateAngle = -90f;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            // animator.SetInteger("Horizontal", 3);
-        }
-
-        if (movement.x == 1 && movement.y == -1)
-        {
-            rotateAngle = -135f;
-            //Debug.Log(rotateAngle);
-            //animator.speed = 1;
-            //animator.SetInteger("Direction", 4);
-        }
-
-        if (movement.x == 0 && movement.y == -1)
-        {
-            rotateAngle = -180f;
-        }
-
-        if (movement.x == -1 && movement.y == -1)
-        {
-            rotateAngle = -225f;
-        }
-
-        if (movement.x == -1 && movement.y == 0)
-        {
-            rotateAngle = -270f;
-        }
-
-        if (movement.x == -1 && movement.y == 1)
-        {
-            rotateAngle = -315;
-        }
-
-        gun.rotation = Quaternion.Euler(0f, 0f, rotateAngle);
-         
+    Vector3 ChooseArrowDirection()
+    {
+        float temp = Mathf.Atan2(animator.GetFloat("Vertical"), animator.GetFloat("Horizontal"))*Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
     }
 
     void MoveCharacter()

@@ -353,6 +353,7 @@ MonoBehaviour:
   startingPosition: {fileID: 11400000, guid: 64d2d1fe644748244bd5a1060e6f5425, type: 2}
   playerInventory: {fileID: 11400000, guid: 3fd39f3dd50e5714a977bd5dfb81c698, type: 2}
   receivedItemSprite: {fileID: 2801745241017933809}
+  playerHit: {fileID: 0}
   gun: {fileID: 381826463399356477}
   arrow: {fileID: 0}
 --- !u!95 &4764080533788176663

@@ -54,13 +54,29 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: b61b55ea57240f042bb329b07521b0d7, type: 3}
     - {fileID: 102900000, guid: e09ebbc2cba20d8419b6c868ee4d6d43, type: 3}
-    totalSpriteSurfaceArea: 14476410
+    totalSpriteSurfaceArea: 14500986
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
       Hash: 7db81cb3c96ac9b6523005fa69883925
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300018, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300016, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300006, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300004, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300002, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300000, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300014, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300012, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300010, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300008, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300028, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300030, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300024, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300026, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300020, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
+  - {fileID: 21300022, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
   - {fileID: 21300000, guid: 2d2a5f9036fcba8408ce45df37607b8a, type: 3}
   - {fileID: 21300000, guid: 52cdc3a06792495469f1e5e7b2835ba5, type: 3}
   - {fileID: 21300018, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
@@ -157,6 +173,22 @@ SpriteAtlas:
   - {fileID: 21300160, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300000, guid: 0927e012dc230aa4092a3b7a000fb11f, type: 3}
   - {fileID: 21300000, guid: 98616c52901725e48ab5949d24d05676, type: 3}
+  - {fileID: 21300020, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300022, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300024, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300026, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300028, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300030, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300002, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300000, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300006, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300004, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300010, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300008, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300014, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300012, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300018, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300016, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
   - {fileID: 21301666, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21301646, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21300378, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
@@ -3295,6 +3327,22 @@ SpriteAtlas:
   - {fileID: 21300058, guid: 14fde85ccb61c9849a58910288732910, type: 3}
   - {fileID: 21300150, guid: 14fde85ccb61c9849a58910288732910, type: 3}
   m_PackedSpriteNamesToIndex:
+  - orge attack sprites_9
+  - orge attack sprites_8
+  - orge attack sprites_3
+  - orge attack sprites_2
+  - orge attack sprites_1
+  - orge attack sprites_0
+  - orge attack sprites_7
+  - orge attack sprites_6
+  - orge attack sprites_5
+  - orge attack sprites_4
+  - orge attack sprites_14
+  - orge attack sprites_15
+  - orge attack sprites_12
+  - orge attack sprites_13
+  - orge attack sprites_10
+  - orge attack sprites_11
   - treasure_chest_PNG61
   - sccpre.cat-health-bar-png-1293748
   - objects 1_9
@@ -3391,6 +3439,22 @@ SpriteAtlas:
   - objects 1_80
   - download-portal-free-png-photo-images-and-clipart-freepngimg-portal-png-200_200
   - PikPng.com_health-bar-png_769017
+  - orge_10
+  - orge_11
+  - orge_12
+  - orge_13
+  - orge_14
+  - orge_15
+  - orge_1
+  - orge_0
+  - orge_3
+  - orge_2
+  - orge_5
+  - orge_4
+  - orge_7
+  - orge_6
+  - orge_9
+  - orge_8
   - ground_tiles_833
   - ground_tiles_823
   - ground_tiles_189

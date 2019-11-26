@@ -170,13 +170,15 @@ MonoBehaviour:
   enemyName: area1
   baseAttack: 1
   moveSpeed: 1
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 6676090913010026353, guid: 21051d15ea5baa247bb01790853aa3c9,
     type: 3}
+  thisLoot: {fileID: 0}
+  roomSignal: {fileID: 0}
   myRigidbody: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 6
   attackRadius: 1
-  homePosition: {fileID: 0}
   anim: {fileID: 0}
   boundary: {fileID: 0}
 --- !u!114 &5235769389380081645
@@ -197,13 +199,15 @@ MonoBehaviour:
   enemyName: Larry
   baseAttack: 1
   moveSpeed: 1
+  homePosition: {x: 0, y: 0}
   deathEffect: {fileID: 6676090913010026353, guid: 21051d15ea5baa247bb01790853aa3c9,
     type: 3}
+  thisLoot: {fileID: 0}
+  roomSignal: {fileID: 0}
   myRigidbody: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 3
   attackRadius: 2
-  homePosition: {fileID: 0}
   anim: {fileID: 0}
 --- !u!61 &5235769389380081643
 BoxCollider2D:

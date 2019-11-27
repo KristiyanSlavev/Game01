@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     
     public float rotateAngle;
+    private Vector3 movement;
 
     public Rigidbody2D myRigidbody;
     public Animator animator;
@@ -28,11 +29,16 @@ public class PlayerMovement : MonoBehaviour
     public Inventory playerInventory;
     public SpriteRenderer receivedItemSprite;
     public Signal playerHit;
+    public Signal reduceMagic;
+    
+
+    [Header("Projectile Stuff")]
     public GameObject projectile;
+    public Item bow;
 
 
     //Vector2 stores both x and y axis
-    private Vector3 movement;
+    
 
     void Start()
     {
@@ -64,12 +70,16 @@ public class PlayerMovement : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Sword1") /*|| CrossPlatformInputManager.GetButtonDown("Arrow1")*/ 
             && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
+            
             StartCoroutine(AttackCo());
         }
         else if(CrossPlatformInputManager.GetButtonDown("Arrow1")
             && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
-            StartCoroutine(SecondAttackCo());
+            if (playerInventory.CheckForItem(bow))
+            {
+                StartCoroutine(SecondAttackCo());
+            }
         }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
@@ -162,9 +172,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void MakeArrow()
     {
-        Vector2 temp = new Vector2(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
-        Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
-        arrow.Setup(temp, ChooseArrowDirection());
+        if(playerInventory.currentMagic > 0)
+        {
+            Vector2 temp = new Vector2(animator.GetFloat("Horizontal"), animator.GetFloat("Vertical"));
+            Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
+            arrow.Setup(temp, ChooseArrowDirection());
+            playerInventory.ReduceMagic(arrow.magicCost);
+            reduceMagic.Raise();
+        }
+        
     }
 
     Vector3 ChooseArrowDirection()

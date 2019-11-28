@@ -54,11 +54,11 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: b61b55ea57240f042bb329b07521b0d7, type: 3}
     - {fileID: 102900000, guid: e09ebbc2cba20d8419b6c868ee4d6d43, type: 3}
-    totalSpriteSurfaceArea: 14501994
+    totalSpriteSurfaceArea: 14800344
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 4169c6316138db7d827a37bf0802a461
+      Hash: a2401a670f41c9228db498f5b824a38b
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300018, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
@@ -171,6 +171,7 @@ SpriteAtlas:
   - {fileID: 21300164, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300162, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300160, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
+  - {fileID: 21300000, guid: 79706bf0b2f21224b838e40e098e1df8, type: 3}
   - {fileID: 21300000, guid: 0927e012dc230aa4092a3b7a000fb11f, type: 3}
   - {fileID: 21300000, guid: 98616c52901725e48ab5949d24d05676, type: 3}
   - {fileID: 21300020, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
@@ -3440,6 +3441,7 @@ SpriteAtlas:
   - objects 1_82
   - objects 1_81
   - objects 1_80
+  - b2a015d1fde0a1be8ba3e5bb6c6c51b8
   - download-portal-free-png-photo-images-and-clipart-freepngimg-portal-png-200_200
   - PikPng.com_health-bar-png_769017
   - orge_10

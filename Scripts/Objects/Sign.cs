@@ -22,7 +22,7 @@ public class Sign : Interactable
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         if (CrossPlatformInputManager.GetButtonDown("Sword1") && playerInRange)
         {

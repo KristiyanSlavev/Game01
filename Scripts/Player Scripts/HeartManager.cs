@@ -21,11 +21,15 @@ public class HeartManager : MonoBehaviour
 
     public void InitHearts()
     {
-        for(int i = 0; i< heartContainers.RuntimeValue; i++)
+        for (int i = 0; i < heartContainers.RuntimeValue; i++)
         {
             //Make hearts active and set them full
-            hearts[i].gameObject.SetActive(true);
-            hearts[i].sprite = fullHeart;
+            if (i < hearts.Length)
+            {
+                hearts[i].gameObject.SetActive(true);
+                hearts[i].sprite = fullHeart;
+
+            }
         }
     }
 

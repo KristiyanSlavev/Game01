@@ -5,6 +5,7 @@ using UnityEngine;
 
 //ol(OL
 [CreateAssetMenu]
+[System.Serializable]
 public class Inventory : ScriptableObject
 {
     public Item currentItem;

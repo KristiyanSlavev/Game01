@@ -250,7 +250,6 @@ GameObject:
   - component: {fileID: 2232435542184428953}
   - component: {fileID: 2232435542184428954}
   - component: {fileID: 2232435542184428934}
-  - component: {fileID: 2232435542184428933}
   - component: {fileID: 2232435542184428932}
   - component: {fileID: 2232435542184428955}
   - component: {fileID: 2232435542184428929}
@@ -281,6 +280,7 @@ Transform:
   - {fileID: 2232435542989048535}
   - {fileID: 3689735566364226692}
   - {fileID: 6038549379343712104}
+  - {fileID: 2750149688145996910}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -370,13 +370,17 @@ MonoBehaviour:
   rotateAngle: 0
   myRigidbody: {fileID: 0}
   animator: {fileID: 2232435542184428954}
-  currentHealth: {fileID: 11400000, guid: d3b4d241a20aef04a82e687ceaab10d9, type: 2}
-  playerHealthSignal: {fileID: 11400000, guid: 575dfc20312fd8040a8a04dc6a190003, type: 2}
   startingPosition: {fileID: 11400000, guid: 64d2d1fe644748244bd5a1060e6f5425, type: 2}
   playerInventory: {fileID: 11400000, guid: 3fd39f3dd50e5714a977bd5dfb81c698, type: 2}
   receivedItemSprite: {fileID: 2232435542989048529}
   playerHit: {fileID: 11400000, guid: c14add842fcc9184daba56065a754a71, type: 2}
   reduceMagic: {fileID: 11400000, guid: 629ed6c9598873a498779caf090d270c, type: 2}
+  flashColor: {r: 0, g: 0, b: 0, a: 0}
+  regularColor: {r: 0, g: 0, b: 0, a: 0}
+  flashDuration: 0
+  numberOfFlashes: 0
+  triggerCollider: {fileID: 0}
+  mySprite: {fileID: 0}
   projectile: {fileID: 6549374984011263873, guid: cf96b004d211b4b4298ccda2e41eef58,
     type: 3}
   bow: {fileID: 11400000, guid: 9363465e7adc2d54ebcd9ec55eb96d50, type: 2}
@@ -424,32 +428,6 @@ BoxCollider2D:
   m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 0.6713309, y: 0.3539567}
-  m_EdgeRadius: 0
---- !u!61 &2232435542184428933
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2232435542184428952}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.007882595, y: -0.26011872}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.69152355, y: 1.211761}
   m_EdgeRadius: 0
 --- !u!114 &2232435542184428932
 MonoBehaviour:
@@ -833,6 +811,79 @@ MonoBehaviour:
   thrust: 2
   knockTime: 0.2
   damage: 1
+--- !u!1 &7506722818972991894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2750149688145996910}
+  - component: {fileID: 7552646674072204008}
+  - component: {fileID: 2724870090905656735}
+  m_Layer: 12
+  m_Name: PlayerHealth
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2750149688145996910
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506722818972991894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2232435541572917918}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7552646674072204008
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506722818972991894}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007882595, y: -0.26011872}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.69152355, y: 1.211761}
+  m_EdgeRadius: 0
+--- !u!114 &2724870090905656735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7506722818972991894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b9e366ca8d3fb4bb3b950716a4d8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: {fileID: 11400000, guid: d3b4d241a20aef04a82e687ceaab10d9, type: 2}
+  currentHealth: 0
+  healthSignal: {fileID: 11400000, guid: 575dfc20312fd8040a8a04dc6a190003, type: 2}
 --- !u!1 &7908400186357660884
 GameObject:
   m_ObjectHideFlags: 0

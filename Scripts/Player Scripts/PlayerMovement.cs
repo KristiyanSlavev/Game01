@@ -25,9 +25,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     //TODO break off the health system
-    public FloatValue currentHealth;
+    /*public FloatValue currentHealth;
     public Signal playerHealthSignal;
+    */
+
     public VectorValue startingPosition;
+    
 
     // TODO breal off player inventory
     public Inventory playerInventory;
@@ -176,6 +179,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    // TODO ability
     private IEnumerator SecondAttackCo()
     {
         //animator.SetBool("Bow", true);
@@ -215,20 +219,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // TODO move to its own script
-    public void Knock(float knockTime, float damage)
+    public void Knock(float knockTime)
     {
+        StartCoroutine(KnockCo(knockTime));
+        /*
         currentHealth.RuntimeValue -= damage;
         playerHealthSignal.Raise();
         if (currentHealth.RuntimeValue> 0)
         {
             
-            StartCoroutine(KnockCo(knockTime));
+            
         }
         else
         {
             this.gameObject.SetActive(false);
         }
-        
+        */
+
     }
 
     // TODO

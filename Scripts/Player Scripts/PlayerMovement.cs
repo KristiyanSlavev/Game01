@@ -23,14 +23,23 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D myRigidbody;
     public Animator animator;
+
+    //TODO break off the health system
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
     public VectorValue startingPosition;
+
+    // TODO breal off player inventory
     public Inventory playerInventory;
     public SpriteRenderer receivedItemSprite;
+
+    // TODO player hit part of the health system
     public Signal playerHit;
+
+    // TODO player magic part of magic system
     public Signal reduceMagic;
 
+    // TODO break off iframe
     [Header("IFrame Stuff")]
     public Color flashColor;
     public Color regularColor;
@@ -39,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D triggerCollider;
     public SpriteRenderer mySprite;
     
-
+    //TODO break off
     [Header("Projectile Stuff")]
     public GameObject projectile;
     public Item bow;
@@ -178,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.walk;
     }
 
+    // TODO part of the ability
     private void MakeArrow()
     {
         if(playerInventory.currentMagic > 0)
@@ -191,6 +201,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    // TODO part of the ability
     Vector3 ChooseArrowDirection()
     {
         float temp = Mathf.Atan2(animator.GetFloat("Vertical"), animator.GetFloat("Horizontal"))*Mathf.Rad2Deg;
@@ -203,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.MovePosition(transform.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    // TODO move to its own script
     public void Knock(float knockTime, float damage)
     {
         currentHealth.RuntimeValue -= damage;
@@ -218,6 +230,8 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+
+    // TODO
     private IEnumerator KnockCo(float knockTime)
     {
         playerHit.Raise();
@@ -231,6 +245,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // TODO move to own script
     private IEnumerator FlashCo()
     {
         int temp = 0;

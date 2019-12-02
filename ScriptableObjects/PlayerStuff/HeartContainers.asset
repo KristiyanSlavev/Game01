@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HeartContainers
   m_EditorClassIdentifier: 
   initialValue: 3
-  RuntimeValue: 4
+  RuntimeValue: 3

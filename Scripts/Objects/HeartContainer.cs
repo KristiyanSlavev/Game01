@@ -9,7 +9,7 @@ public class HeartContainer : PowerUp
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !other.isTrigger)
         {
             heartContainers.RuntimeValue += 1;
             playerHealth.RuntimeValue = heartContainers.RuntimeValue * 2;

@@ -50,10 +50,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    //OnEnabled goes every time an object gets enables whereas Start only executes once
+    void OnEnable()
     {
+        ClearInventorySlots();
         MakeInventorySlots();
+        Debug.Log("asd");
         SetTextAndButton("", false);
     }
 

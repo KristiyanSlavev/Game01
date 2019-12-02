@@ -16,7 +16,7 @@ public class InventoryItem : ScriptableObject
 
     public void Use()
     {
-        Debug.Log("Item");
+        
         thisEvent.Invoke();
     }
 

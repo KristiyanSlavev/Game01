@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6955626331022196778}
   - component: {fileID: 6955626331022196789}
   - component: {fileID: 6955626331022196788}
+  - component: {fileID: 866015263253916579}
   m_Layer: 5
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5377358, g: 0.39733773, b: 0.15472585, a: 1}
+  m_Color: {r: 0.8773585, g: 0.8727977, b: 0.864943, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -114,7 +115,34 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6955626331022196789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 866015263253916579}
+        m_MethodName: ClickedOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &866015263253916579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955626331022196790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c1c968a61d0f748922fb7ac5a517d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNumberText: {fileID: 6955626332385003487}
+  itemImage: {fileID: 6955626332172502770}
+  thisItem: {fileID: 0}
+  thisManager: {fileID: 0}
 --- !u!1 &6955626332172502780
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +178,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6955626332172502771
 CanvasRenderer:
@@ -221,8 +249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.503, y: -47.8}
-  m_SizeDelta: {x: 54.995, y: 27.72}
+  m_AnchoredPosition: {x: 12.3, y: -22.2}
+  m_SizeDelta: {x: 32.76, y: 16.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6955626332385003484
 CanvasRenderer:
@@ -278,8 +306,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

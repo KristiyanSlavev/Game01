@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//ol(OL
 [CreateAssetMenu]
 [System.Serializable]
 public class Inventory : ScriptableObject

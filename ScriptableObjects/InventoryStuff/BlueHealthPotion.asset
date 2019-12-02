@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d7a906e1218654492b5188381153ed, type: 3}
+  m_Name: BlueHealthPotion
+  m_EditorClassIdentifier: 
+  itemName: Large Magic Potion
+  itemDescription: Use This Potion To Regenerate Mana
+  itemImage: {fileID: 21300000, guid: 116b5ec7ed83a4247984a68b3032dcfe, type: 3}
+  numberHeld: 1
+  usable: 1
+  unique: 0
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2790879346134924699, guid: 0852a8e67d6914f40855d53423f59535,
+          type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -54,11 +54,11 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: b61b55ea57240f042bb329b07521b0d7, type: 3}
     - {fileID: 102900000, guid: e09ebbc2cba20d8419b6c868ee4d6d43, type: 3}
-    totalSpriteSurfaceArea: 15038672
+    totalSpriteSurfaceArea: 18520946
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 3fc8bbeeff12b338e248363e4632ab24
+      Hash: a5f0d07cd4700b7e332b10ae5f675c1b
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300018, guid: a704d110cc6c64e4f93a786f95ac89c3, type: 3}
@@ -172,6 +172,7 @@ SpriteAtlas:
   - {fileID: 21300162, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300160, guid: c16b3ca0cfd7be54288f7b4aef4f5ed7, type: 3}
   - {fileID: 21300000, guid: 79706bf0b2f21224b838e40e098e1df8, type: 3}
+  - {fileID: 21300000, guid: 3c5ce1f1e2fd90c439c42048bf492683, type: 3}
   - {fileID: 21300000, guid: 0927e012dc230aa4092a3b7a000fb11f, type: 3}
   - {fileID: 21300000, guid: 98616c52901725e48ab5949d24d05676, type: 3}
   - {fileID: 21300020, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
@@ -190,6 +191,7 @@ SpriteAtlas:
   - {fileID: 21300012, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
   - {fileID: 21300018, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
   - {fileID: 21300016, guid: 646647721e8d3724fa565cdf28b48428, type: 3}
+  - {fileID: 21300000, guid: d698df720496cdb419d1119fe900c9bd, type: 3}
   - {fileID: 21301666, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21301646, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
   - {fileID: 21300378, guid: dc6085d2662cf9e4fbaaad8804f8040c, type: 3}
@@ -1156,6 +1158,7 @@ SpriteAtlas:
   - {fileID: 21300004, guid: 4e5cd7b4acdadb440865b0a75f9df257, type: 3}
   - {fileID: 21300006, guid: 4e5cd7b4acdadb440865b0a75f9df257, type: 3}
   - {fileID: 21300000, guid: a44819d5c7726eb4fb0127f82a3286d6, type: 3}
+  - {fileID: 21300000, guid: 7c897ed55287cb84d88409f99da336b7, type: 3}
   - {fileID: 21300000, guid: b29f6de5f6c79114fb32562fa3433319, type: 3}
   - {fileID: 21300000, guid: f0fc6a767e783604785910c759a22569, type: 3}
   - {fileID: 21300000, guid: 03eaa6a68e2f42744b22f3035715be74, type: 3}
@@ -1243,6 +1246,7 @@ SpriteAtlas:
   - {fileID: 21300114, guid: 64e0e9676cbd7a042bbccfe1537043bf, type: 3}
   - {fileID: 21300108, guid: 64e0e9676cbd7a042bbccfe1537043bf, type: 3}
   - {fileID: 21300110, guid: 64e0e9676cbd7a042bbccfe1537043bf, type: 3}
+  - {fileID: 21300000, guid: 116b5ec7ed83a4247984a68b3032dcfe, type: 3}
   - {fileID: 21300000, guid: 0347346836f1d994b9e00b67bae850cb, type: 3}
   - {fileID: 21300000, guid: 64b43ce8bec964a4e91000718a31479e, type: 3}
   - {fileID: 21300008, guid: f816f5391f0360046aed93af1f704326, type: 3}
@@ -1911,6 +1915,7 @@ SpriteAtlas:
   - {fileID: 21300042, guid: 88a417f959937a04ba2dfa4996f51485, type: 3}
   - {fileID: 21300044, guid: 88a417f959937a04ba2dfa4996f51485, type: 3}
   - {fileID: 21300000, guid: f93c9a2a940cae146863a28b995636a9, type: 3}
+  - {fileID: 21300000, guid: 7d5fe67a8666b754f90e93adff98e174, type: 3}
   - {fileID: 21300428, guid: 6cd9699a5f2af864b8ecf8012df86b8b, type: 3}
   - {fileID: 21300430, guid: 6cd9699a5f2af864b8ecf8012df86b8b, type: 3}
   - {fileID: 21300432, guid: 6cd9699a5f2af864b8ecf8012df86b8b, type: 3}
@@ -3340,6 +3345,7 @@ SpriteAtlas:
   - {fileID: 21300150, guid: 14fde85ccb61c9849a58910288732910, type: 3}
   - {fileID: 21300000, guid: f0ba611d24e38864791193cebfcced08, type: 3}
   - {fileID: 21300000, guid: 3c60349da3b03d640bd1cdb463797805, type: 3}
+  - {fileID: 21300000, guid: 32ea22fd9fe92a64d8d10c6e83f75af6, type: 3}
   - {fileID: 21300000, guid: 818cc52e2c8b130478036ee9d96cb615, type: 3}
   - {fileID: 21300000, guid: 2f9c16dfedd5ea04dafde736f5c11336, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -3454,6 +3460,7 @@ SpriteAtlas:
   - objects 1_81
   - objects 1_80
   - b2a015d1fde0a1be8ba3e5bb6c6c51b8
+  - wooden-sword-png
   - download-portal-free-png-photo-images-and-clipart-freepngimg-portal-png-200_200
   - PikPng.com_health-bar-png_769017
   - orge_10
@@ -3472,6 +3479,7 @@ SpriteAtlas:
   - orge_6
   - orge_9
   - orge_8
+  - pinpng.com-gears-icon-png-2276148
   - ground_tiles_833
   - ground_tiles_823
   - ground_tiles_189
@@ -4438,6 +4446,7 @@ SpriteAtlas:
   - Player_Legs_Only2_2
   - Player_Legs_Only2_3
   - Player01_Complete_Uncolored_500x(03)
+  - which-rpg-inventory-system-icon-preliminary-steps
   - Treasure-chest-free-to-use-clip-art
   - magic bottle
   - Minimap Overlay
@@ -4525,6 +4534,7 @@ SpriteAtlas:
   - d9ysr3m-cab148bc-49b5-40fd-8da4-fd7fd5d44084_57
   - d9ysr3m-cab148bc-49b5-40fd-8da4-fd7fd5d44084_54
   - d9ysr3m-cab148bc-49b5-40fd-8da4-fd7fd5d44084_55
+  - toppng.com-mana-official-orcs-must-clip-art-royalty-free-library-potion-389x401
   - 5439e82f8d764ad9cc2ea00489281bec_honey-free-images-at-clkercom-vector-clip-art-online-royalty-_300-300
   - magic bar_0
   - Cliff_tileset_4
@@ -5193,6 +5203,7 @@ SpriteAtlas:
   - log_21
   - log_22
   - Player01
+  - toppng.com-otion-of-healing-png-image-royalty-free-download-healing-potion-clipart-346x500
   - object- layer_214
   - object- layer_215
   - object- layer_216
@@ -6622,6 +6633,7 @@ SpriteAtlas:
   - TilesetExample_75
   - Minimap mask
   - bow
+  - 227-2276148_wikipedia-interwiki-section-gear-icon-gear-icon-png
   - Square
   - greenBlank
   m_Tag: Sprite Atlas

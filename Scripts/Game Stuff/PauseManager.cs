@@ -8,6 +8,8 @@ public class PauseManager : MonoBehaviour
 {
     private bool isPaused;
     public GameObject pausePanel;
+    public GameObject inventoryPanel;
+    public bool usingPausePanel;
     public string mainMenu;
 
     // Start is called before the first frame update
@@ -15,6 +17,9 @@ public class PauseManager : MonoBehaviour
     {
         Debug.Log("3");
         isPaused = false;
+        pausePanel.SetActive(false);
+        inventoryPanel.SetActive(false);
+        usingPausePanel = false;
     }
 
     // Update is called once per frame
@@ -34,9 +39,11 @@ public class PauseManager : MonoBehaviour
         {
             pausePanel.SetActive(true);
             Time.timeScale = 0f;
+            usingPausePanel = true;
         }
         else
         {
+            inventoryPanel.SetActive(false);
             pausePanel.SetActive(false);
             Time.timeScale = 1f;
         }
@@ -46,5 +53,20 @@ public class PauseManager : MonoBehaviour
     {
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
+    }
+
+    public void Switchpanels()
+    {
+        usingPausePanel = !usingPausePanel;
+        if (usingPausePanel)
+        {
+            pausePanel.SetActive(true);
+            inventoryPanel.SetActive(false);
+        }
+        else
+        {
+            inventoryPanel.SetActive(true);
+            pausePanel.SetActive(false);
+        }
     }
 }

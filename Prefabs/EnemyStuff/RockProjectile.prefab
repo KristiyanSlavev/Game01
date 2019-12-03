@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 264548128530907357}
   - component: {fileID: 1591492145232057416}
   - component: {fileID: 6268978928594211764}
+  - component: {fileID: 8076146260230628726}
+  - component: {fileID: 3864480646607697356}
   m_Layer: 10
   m_Name: RockProjectile
   m_TagString: Untagged
@@ -60,6 +62,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -134,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 1
   knockTime: 0.3
-  damage: 1
+  otherTag: Player
 --- !u!114 &6268978928594211764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,5 +152,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   directionToMove: {x: 0, y: 0}
-  lifetime: 2
   myRigidbody: {fileID: 264548128530907357}
+--- !u!114 &8076146260230628726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451783649681697768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29b71273e9bf241af29b57eb78709c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherString: Player
+  damage: 1
+--- !u!114 &3864480646607697356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7451783649681697768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9c494804d016d4bab357eba1593948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 0.7

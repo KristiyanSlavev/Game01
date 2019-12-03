@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5235769389380081644}
   - component: {fileID: 5235769389380081647}
   - component: {fileID: 5235769389380081630}
-  - component: {fileID: 5235769389380081645}
   - component: {fileID: 5235769389380081643}
   - component: {fileID: 5235769389380081642}
   m_Layer: 9
@@ -31,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5235769389380081619}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.83, y: 28.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -63,6 +62,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -170,45 +170,17 @@ MonoBehaviour:
   enemyName: area1
   baseAttack: 1
   moveSpeed: 1
-  homePosition: {x: 0, y: 0}
+  homePosition: {x: 18.8, y: 28.5}
   deathEffect: {fileID: 6676090913010026353, guid: 21051d15ea5baa247bb01790853aa3c9,
     type: 3}
-  thisLoot: {fileID: 0}
-  roomSignal: {fileID: 0}
-  myRigidbody: {fileID: 0}
+  thisLoot: {fileID: 11400000, guid: 86da4b26ef0fea9448aa7b41ead8163c, type: 2}
+  roomSignal: {fileID: 11400000, guid: 344998f7071f92547b5a47c94ae4d8a5, type: 2}
+  myRigidbody: {fileID: 5235769389380081644}
   target: {fileID: 0}
   chaseRadius: 6
   attackRadius: 1
   anim: {fileID: 0}
   boundary: {fileID: 0}
---- !u!114 &5235769389380081645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5235769389380081619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8ffa05647358943b3acfe6fc54191b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  maxHealth: {fileID: 11400000, guid: c066800dc0e887a47a0b0639dbe59efb, type: 2}
-  health: 10
-  enemyName: Larry
-  baseAttack: 1
-  moveSpeed: 1
-  homePosition: {x: 0, y: 0}
-  deathEffect: {fileID: 6676090913010026353, guid: 21051d15ea5baa247bb01790853aa3c9,
-    type: 3}
-  thisLoot: {fileID: 0}
-  roomSignal: {fileID: 0}
-  myRigidbody: {fileID: 0}
-  target: {fileID: 0}
-  chaseRadius: 3
-  attackRadius: 2
-  anim: {fileID: 0}
 --- !u!61 &5235769389380081643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -249,4 +221,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 4
   knockTime: 0.2
-  damage: 1
+  otherTag: Player

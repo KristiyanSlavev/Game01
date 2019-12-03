@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 3
   knockTime: 0.2
-  damage: 3
+  otherTag: Player
 --- !u!1 &8744505435968805225
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +132,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -170,7 +171,6 @@ GameObject:
   - component: {fileID: 8744505436152015735}
   - component: {fileID: 8744505436152015728}
   - component: {fileID: 8744505436152015729}
-  - component: {fileID: 8744505436152015722}
   m_Layer: 0
   m_Name: Ogre
   m_TagString: Untagged
@@ -222,6 +222,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -365,21 +366,6 @@ MonoBehaviour:
   chaseRadius: 5
   attackRadius: 1.5
   anim: {fileID: 8744505436152015728}
---- !u!114 &8744505436152015722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8744505436152015730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3324ad14e54eae449c3c9bf27108479, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrust: 2
-  knockTime: 0.2
-  damage: 1
 --- !u!1 &8744505436504533536
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 3
   knockTime: 0.2
-  damage: 3
+  otherTag: Player
 --- !u!1 &8744505436628800971
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 3
   knockTime: 0.2
-  damage: 3
+  otherTag: Player
 --- !u!1 &8744505437522870395
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,4 +593,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 3
   knockTime: 0.2
-  damage: 3
+  otherTag: Player

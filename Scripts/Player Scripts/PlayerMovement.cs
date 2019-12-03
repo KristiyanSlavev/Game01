@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        movement = Vector3.zero;
+        //movement = Vector3.zero;
         //Input
         movement.x = Mathf.RoundToInt(CrossPlatformInputManager.GetAxisRaw("Horizontal"));
         movement.y = Mathf.RoundToInt(CrossPlatformInputManager.GetAxisRaw("Vertical"));

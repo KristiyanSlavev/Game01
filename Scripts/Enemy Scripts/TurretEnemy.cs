@@ -12,16 +12,27 @@ public class TurretEnemy : Log
 
     private void Update()
     {
-        fireDelaySeconds -= Time.deltaTime;
-        if(fireDelaySeconds <= 0)
+        if (canFire == false)
         {
-            canFire = true;
-            fireDelaySeconds = fireDelay;
-        }
+            fireDelaySeconds -= Time.deltaTime;
+            if (fireDelaySeconds <= 0)
+            {
+                canFire = true;
+                fireDelaySeconds = fireDelay;
+            }
+        } 
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, chaseRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        
     }
 
     public override void CheckDistance()
     {
+
         if (Vector3.Distance(target.position,
                            transform.position) <= chaseRadius
                            && Vector3.Distance(target.position, transform.position) > attackRadius)

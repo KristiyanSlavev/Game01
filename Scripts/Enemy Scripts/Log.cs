@@ -5,9 +5,11 @@ using UnityEngine;
 public class Log : Enemy
 {
     public Rigidbody2D myRigidbody;
+    [Header("Target Variables")]
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
+    [Header("Animator")]
     public Animator anim;
 
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class Log : Enemy
 
     public virtual void CheckDistance()
     {
+        
         if (Vector3.Distance(target.position,
                             transform.position) <= chaseRadius
                             && Vector3.Distance(target.position, transform.position) > attackRadius)
